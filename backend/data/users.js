@@ -3,9 +3,9 @@ import bcrypt from 'bcryptjs';
 //Creación de usuario administrador
 const users = [
   {
-    name: 'Isabel Segovia',
-    email: 'gisabellsegovia@gmail.com',
-    password: bcrypt.hashSync('Metlife', 10),
+    name: 'Admin',
+    email: 'admin@example.com',
+    password: bcrypt.hashSync('123456', 10),
     isAdmin: true,
   },
 ];
