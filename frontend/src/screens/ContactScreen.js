@@ -3,6 +3,8 @@ import { Button, Form } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
+//El formulario de contacto está hecho con static form. Cada quien puede hacerlo como guste
+
 const ContactScreen = () => {
   useEffect(() => {
     document.title = 'Contáctanos';
@@ -17,7 +19,7 @@ const ContactScreen = () => {
     honeypot: '', // if any value received in this field, form submission will be ignored.
     message: '',
     replyTo: '@', // this will set replyTo of email to email address entered in the form
-    accessKey: '0cbf4328-8b1b-4a90-98a8-11bf020b41c1', // get your access key from https://www.staticforms.xyz
+    accessKey: process.env.FORM, // get your access key from https://www.staticforms.xyz
   });
 
   const [response, setResponse] = useState({
